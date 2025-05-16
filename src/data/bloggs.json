@@ -1,0 +1,12 @@
+[
+  {
+    "title": "string",
+    "date": "string",
+    "bloggContent": "string"
+  },
+  {
+    "title": "Recipe AI",
+    "description": "Extracts recipe data and summarizes it.",
+    "link": "https://github.com/yourname/recipe-ai"
+  }
+]
