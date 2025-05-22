@@ -1,4 +1,5 @@
 import styles from "./BlogPiece.module.css";
+import { Blog } from "@/types";
 
 export const BlogPiece = ({ title, date, blogContent }: Blog) => {
   return (

@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./page.module.css";
+import { Blog } from "@/types";
 import { BlogPiece } from "@/components/BloggPiece/BlogPiece";
 import { getBlogs } from "@/services/apiService";
 import { useEffect, useState } from "react";
