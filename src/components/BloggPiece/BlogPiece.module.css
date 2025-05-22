@@ -1,0 +1,36 @@
+.titleHeader {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.titleHeader h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--heading-color);
+}
+
+.titleHeader p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+.blogContent {
+  line-height: 1.7;
+  font-size: 1.125rem;
+  color: var(--text-main);
+  max-width: 700px;
+  margin: 0 auto;
+  white-space: pre-line;
+}
+
+.blogContent::after {
+  content: "";
+  display: block;
+  margin: 3rem 0;
+  margin-left: 15%;
+  width: 70%;
+  border-bottom: 1px solid var(--border);
+}

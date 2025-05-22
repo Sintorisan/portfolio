@@ -1,4 +1,5 @@
-export async function getBloggs(): Promise<Blogg[]> {
-  const res = await fetch("/data/bloggs.json");
-  return res.json();
-}
+export const getBlogs = async (): Promise<Blog[]> => {
+  const res = await fetch("/data/blogs.json");
+  const data: Blog[] = await res.json();
+  return data;
+};

@@ -1,5 +1,5 @@
-type Blogg = {
+type Blog = {
   title: string;
   date: string;
-  bloggContent: string;
+  blogContent: string;
 };
