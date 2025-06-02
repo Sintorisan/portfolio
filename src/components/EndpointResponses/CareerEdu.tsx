@@ -1,6 +1,5 @@
 import styles from "@/components/EndpointResponses/EndpointResponses.module.css";
 import { useState } from "react";
-import { ImgModal } from "../Modals/ImgModal";
 
 interface Education {
   school: string;

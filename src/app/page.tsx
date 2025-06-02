@@ -99,7 +99,7 @@ export default function Home() {
 
       {selectedImageUrl && (
         <ImgModal title={selectedImageUrl} isOpen={true} onClose={() => setSelectedImageUrl(null)}>
-          <img src={`img/${selectedImageUrl}`} />
+          <img src={`img/${selectedImageUrl}`} alt="image" />
         </ImgModal>
       )}
     </main>
