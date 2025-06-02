@@ -24,7 +24,7 @@ export const AboutProf = () => {
 
   const data = {
     title: "Junior .NET Developer",
-    bio: "Former carpenter turned software developer. Passionate about building modern, maintainable systems.",
+    bio: "Former carpenter turned software developer. Passionate about building modern, maintainable systems",
     mainTechStack: ["C#", ".NET", "React", "Blazor", "SQL"],
     skills: [
       "C#",
@@ -55,46 +55,46 @@ export const AboutProf = () => {
           {"{"}
           <ul className={styles.jsonScheme}>
             <li>
-              <span className={styles.jsonKey}>"title"</span> :{" "}
-              <span className={styles.stringValue}>"{data.title}"</span>,
+              <span className={styles.jsonKey}>&quot;title&quot;</span> :{" "}
+              <span className={styles.stringValue}>&quot;{data.title}&quot;</span>,
             </li>
             <li>
-              <span className={styles.jsonKey}>"bio"</span> :{" "}
-              <span className={styles.stringValue}>"{data.bio}"</span>,
+              <span className={styles.jsonKey}>&quot;bio&quot;</span> :{" "}
+              <span className={styles.stringValue}>&quot;{data.bio}&quot;</span>,
             </li>
             <li>
-              <span className={styles.jsonKey}>"experience"</span> :{" "}
-              <span className={styles.stringValue}>{data.experienceYears}</span>,
+              <span className={styles.jsonKey}>&quot;experience&quot;</span> :{" "}
+              <span className={styles.stringValue}>&quot;{data.experienceYears}&quot;</span>,
             </li>
             <li>
-              <span className={styles.jsonKey}>"mainTechStack"</span> :{" ["}
+              <span className={styles.jsonKey}>&quot;mainTechStack&quot;</span> :{" ["}
               {data.mainTechStack.map((tech, index) => (
                 <span key={index} className={styles.stringValue}>
-                  "{tech}"{data.mainTechStack.length - 1 > index ? ", " : ""}
+                  &quot;{tech}&quot;{data.mainTechStack.length - 1 > index ? ", " : ""}
                 </span>
               ))}
               {"],"}
             </li>
             <li>
-              <span className={styles.jsonKey}>"skills"</span> :{" ["}
+              <span className={styles.jsonKey}>&quot;skills&quot;</span> :{" ["}
               {data.skills.map((skill, index) => (
                 <span key={index} className={styles.stringValue}>
-                  "{skill}"{data.skills.length - 1 > index ? ", " : ""}
+                  &quot;{skill}&quot;{data.skills.length - 1 > index ? ", " : ""}
                 </span>
               ))}
               {"],"}
             </li>
             <li>
-              <span className={styles.jsonKey}>"currentlyLearning"</span> :{" ["}
+              <span className={styles.jsonKey}>&quot;currentlyLearning&quot;</span> :{" ["}
               {data.currentlyLearning.map((current, index) => (
                 <span key={index} className={styles.stringValue}>
-                  "{current}"{data.currentlyLearning.length - 1 > index ? ", " : ""}
+                  &quot;{current}&quot;{data.currentlyLearning.length - 1 > index ? ", " : ""}
                 </span>
               ))}
               {"],"}
             </li>
             <li>
-              <span className={styles.jsonKey}>"openToWork"</span> :{" "}
+              <span className={styles.jsonKey}>&quot;openToWork&quot;</span> :{" "}
               <span className={styles.boolValue}>{String(data.openToWork)}</span>
             </li>
           </ul>

@@ -33,26 +33,26 @@ export const AboutMe = () => {
           {"{"}
           <ul className={styles.jsonScheme}>
             <li>
-              <span className={styles.jsonKey}>"name"</span> :{" "}
-              <span className={styles.stringValue}>"{data.name}"</span>,
+              <span className={styles.jsonKey}>&quot;name&quot;</span> :{" "}
+              <span className={styles.stringValue}>&quot;{data.name}&quot;</span>,
             </li>
             <li>
-              <span className={styles.jsonKey}>"age"</span> :{" "}
+              <span className={styles.jsonKey}>&quot;age&quot;</span> :{" "}
               <span className={styles.numberValue}>{data.age}</span>,
             </li>
             <li>
-              <span className={styles.jsonKey}>"nationality"</span> :{" "}
-              <span className={styles.stringValue}>"{data.nationality}"</span>,
+              <span className={styles.jsonKey}>&quot;nationality&quot;</span> :{" "}
+              <span className={styles.stringValue}>&quot;{data.nationality}&quot;</span>,
             </li>
             <li>
-              <span className={styles.jsonKey}>"location"</span> :{" "}
-              <span className={styles.stringValue}>"{data.location}"</span>,
+              <span className={styles.jsonKey}>&quot;location&quot;</span> :{" "}
+              <span className={styles.stringValue}>&quot;{data.location}&quot;</span>,
             </li>
             <li>
-              <span className={styles.jsonKey}>"traits"</span> : [
+              <span className={styles.jsonKey}>&quot;traits&quot;</span> : [
               {data.traits.map((trait, index) => (
                 <span key={index} className={styles.stringValue}>
-                  "{trait}"{index < data.traits.length - 1 ? ", " : ""}
+                  &quot;{trait}&quot;{index < data.traits.length - 1 ? ", " : ""}
                 </span>
               ))}
               ],
@@ -62,8 +62,8 @@ export const AboutMe = () => {
               <ul className={styles.nestedObject}>
                 {Object.entries(data.languages).map(([lang, level], index, array) => (
                   <li key={lang}>
-                    <span className={styles.jsonKey}>"{lang}"</span> :{" "}
-                    <span className={styles.stringValue}>"{level}"</span>
+                    <span className={styles.jsonKey}>&quot;{lang}&quot;</span> :{" "}
+                    <span className={styles.stringValue}>&quot;{level}&quot;</span>
                     {index < array.length - 1 ? "," : ""}
                   </li>
                 ))}
@@ -71,10 +71,10 @@ export const AboutMe = () => {
               {"},"}
             </li>
             <li>
-              <span className={styles.jsonKey}>"hobbies"</span> : [
+              <span className={styles.jsonKey}>&quot;hobbies&quot;</span> : [
               {data.hobbies.map((hobby, index) => (
                 <span key={index} className={styles.stringValue}>
-                  "{hobby}"{index < data.hobbies.length - 1 ? ", " : ""}
+                  &quot;{hobby}&quot;{index < data.hobbies.length - 1 ? ", " : ""}
                 </span>
               ))}
               ]

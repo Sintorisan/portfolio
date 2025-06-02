@@ -32,8 +32,8 @@ export const CareerEdu = ({ onOpenImage }: Props) => {
       school: "AI Sweden",
       degree: "Certification",
       field: "AI – Organisation, Värde och Införande",
-      start: "2024-03-01",
-      end: "2024-04-15",
+      start: "2023-11-01",
+      end: "2024-02-01",
       graduated: true,
       diplomaImg: "aisweden- diploma.jpg",
     },
@@ -50,33 +50,33 @@ export const CareerEdu = ({ onOpenImage }: Props) => {
               <ul className={styles.jsonScheme} key={index}>
                 {"{"}
                 <li className={styles.jsonScheme}>
-                  <span className={styles.jsonKey}>"school"</span> :{" "}
-                  <span className={styles.stringValue}>"{edu.school}"</span>,
+                  <span className={styles.jsonKey}>&quot;school&quot;</span> :{" "}
+                  <span className={styles.stringValue}>&quot;{edu.school}&quot;</span>,
                 </li>
                 <li className={styles.jsonScheme}>
-                  <span className={styles.jsonKey}>"degree"</span> :{" "}
-                  <span className={styles.stringValue}>"{edu.degree}"</span>,
+                  <span className={styles.jsonKey}>&quot;degree&quot;</span> :{" "}
+                  <span className={styles.stringValue}>&quot;{edu.degree}&quot;</span>,
                 </li>
                 <li className={styles.jsonScheme}>
-                  <span className={styles.jsonKey}>"field"</span> :{" "}
-                  <span className={styles.stringValue}>"{edu.field}"</span>,
+                  <span className={styles.jsonKey}>&quot;field&quot;</span> :{" "}
+                  <span className={styles.stringValue}>&quot;{edu.field}&quot;</span>,
                 </li>
                 <li className={styles.jsonScheme}>
-                  <span className={styles.jsonKey}>"start"</span> :{" "}
-                  <span className={styles.stringValue}>"{edu.start}"</span>,
+                  <span className={styles.jsonKey}>&quot;start&quot;</span> :{" "}
+                  <span className={styles.stringValue}>&quot;{edu.start}&quot;</span>,
                 </li>
                 <li className={styles.jsonScheme}>
-                  <span className={styles.jsonKey}>"end"</span> :{" "}
-                  <span className={styles.stringValue}>"{edu.end}"</span>,
+                  <span className={styles.jsonKey}>&quot;end&quot;</span> :{" "}
+                  <span className={styles.stringValue}>&quot;{edu.end}&quot;</span>,
                 </li>
                 <li className={styles.jsonScheme}>
-                  <span className={styles.jsonKey}>"graduated"</span> :{" "}
-                  <span className={styles.boolValue}>"{String(edu.graduated)}"</span>,
+                  <span className={styles.jsonKey}>&quot;graduated&quot;</span> :{" "}
+                  <span className={styles.boolValue}>{String(edu.graduated)}</span>,
                 </li>
                 <li className={styles.jsonScheme}>
-                  <span className={styles.jsonKey}>"diplomaImg"</span> :{" "}
+                  <span className={styles.jsonKey}>&quot;diplomaImg&quot;</span> :{" "}
                   <span className={styles.linkValue} onClick={() => onOpenImage(edu.diplomaImg)}>
-                    "{edu.diplomaImg}"
+                    &quot;{edu.diplomaImg}&quot;
                   </span>
                 </li>
                 {data.length - 1 > index ? "}, " : "}"}

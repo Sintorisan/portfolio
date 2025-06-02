@@ -67,47 +67,51 @@ export const CareerExp = () => {
             <ul key={index} className={styles.jsonScheme}>
               {"{"}
               <li className={styles.jsonScheme}>
-                <span className={styles.jsonKey}>"title"</span> :{" "}
-                <span className={styles.stringValue}>"{exp.title}"</span>,
+                <span className={styles.jsonKey}>&quot;title&quot;</span> :{" "}
+                <span className={styles.stringValue}>&quot;{exp.title}&quot;</span>,
               </li>
               <li className={styles.jsonScheme}>
-                <span className={styles.jsonKey}>"company"</span> :{" "}
-                <span className={styles.stringValue}>"{exp.company}"</span>,
+                <span className={styles.jsonKey}>&quot;company&quot;</span> :{" "}
+                <span className={styles.stringValue}>&quot;{exp.company}&quot;</span>,
               </li>
               <li className={styles.jsonScheme}>
-                <span className={styles.jsonKey}>"start"</span> :{" "}
-                <span className={styles.stringValue}>"{exp.start}"</span>,
+                <span className={styles.jsonKey}>&quot;start&quot;</span> :{" "}
+                <span className={styles.stringValue}>&quot;{exp.start}&quot;</span>,
               </li>
               <li className={styles.jsonScheme}>
-                <span className={styles.jsonKey}>"end"</span> :{" "}
-                <span className={styles.stringValue}>"{exp.end}"</span>,
+                <span className={styles.jsonKey}>&quot;end&quot;</span> :{" "}
+                <span className={styles.stringValue}>&quot;{exp.end}&quot;</span>,
               </li>
-              <span className={`${styles.jsonScheme} ${styles.jsonKey}`}>"projects"</span> : {"["}
+              <span className={`${styles.jsonScheme} ${styles.jsonKey}`}>&quot;projects&quot;</span>{" "}
+              : {"["}
               <ul className={styles.jsonScheme}>
                 {exp.projects.map((project, index) => (
                   <li key={index}>
                     <ul className={styles.jsonScheme}>
                       {"{"}
                       <li className={styles.jsonScheme}>
-                        <span className={styles.jsonKey}>"title"</span> :{" "}
-                        <span className={styles.stringValue}>"{project.title}"</span>,
+                        <span className={styles.jsonKey}>&quot;title&quot;</span> :{" "}
+                        <span className={styles.stringValue}>&quot;{project.title}&quot;</span>,
                       </li>
                       <li className={styles.jsonScheme}>
-                        <span className={styles.jsonKey}>"description"</span> :{" "}
-                        <span className={styles.stringValue}>"{project.description}"</span>,
+                        <span className={styles.jsonKey}>&quot;description&quot;</span> :{" "}
+                        <span className={styles.stringValue}>
+                          &quot;{project.description}&quot;
+                        </span>
+                        ,
                       </li>
                       <li className={styles.jsonScheme}>
-                        <span className={styles.jsonKey}>"technologies"</span> :{"["}
+                        <span className={styles.jsonKey}>&quot;technologies&quot;</span> :{"["}
                         {project.technologies.map((tech, i) => (
                           <span key={i} className={styles.stringValue}>
-                            "{tech}"{i < project.technologies.length - 1 ? ", " : ""}
+                            &quot;{tech}&quot;{i < project.technologies.length - 1 ? ", " : ""}
                           </span>
                         ))}
                         {"],"}
                       </li>
                       <li className={styles.jsonScheme}>
-                        <span className={styles.jsonKey}>"myRole"</span> :{" "}
-                        <span className={styles.stringValue}>"{project.myRole}"</span>
+                        <span className={styles.jsonKey}>&quot;myRole&quot;</span> :{" "}
+                        <span className={styles.stringValue}>&quot;{project.myRole}&quot;</span>
                       </li>
                       {"}"}
                       {index < exp.projects.length - 1 ? "," : ""}
