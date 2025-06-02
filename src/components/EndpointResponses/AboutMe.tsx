@@ -20,7 +20,7 @@ export const AboutMe = () => {
   const data = {
     name: "Sindri Elfarsson",
     age: getMyAge(),
-    bio: "I’m Sindri, an easygoing, slightly shy extrovert who just really enjoys building things. Whether it’s writing code, sketching weird shapes on a piece of paper, or strumming random chords on a guitar, I find joy in the creative process itself, especially that feeling when the pieces finally click together. I like to compare problems to real-life things, it helps me reason through them. I don’t always know the “right” way to start, but I like figuring things out as I go. I work best when there’s a balance between planning and winging it, and I get a real kick out of seeing steady progress, no matter how small the steps. I’m most comfortable behind the scenes, but I enjoy working in teams too, bouncing ideas around, figuring things out together. I might come off quiet at first, but once I settle in, I open up. People often describe me as kind and a bit playful, which I guess tracks. I don’t take myself too seriously, but I care deeply about the things I build. This portfolio (and the blog) is my way of stepping a little outside my comfort zone. I don’t usually share stuff about myself online, but I figured it was time to give it a shot. If nothing else, I hope you read this and think: “Hey, this seems like someone I’d like to work with, or at least grab a coffee with.”",
+    bio: "I’m Sindri, an easygoing, slightly shy extrovert who just really enjoys building things. Whether it’s writing code, sketching weird shapes on a piece of paper, or strumming random chords on a guitar, or even crafting something out of wood, I find joy in the creative process itself, especially that feeling when the pieces finally click together. I like to compare problems to real-life things, it helps me reason through them. I don’t always know the “right” way to start, but I like figuring things out as I go. I work best when there’s a balance between planning and winging it, and I get a real kick out of seeing steady progress, no matter how small the steps. I’m most comfortable behind the scenes, but I enjoy working in teams too, bouncing ideas around, figuring things out together. I might come off quiet at first, but once I settle in, I open up. People often describe me as kind and a bit playful, which I guess tracks. I don’t take myself too seriously, but I care deeply about the things I build. This portfolio (and the blog) is my way of stepping a little outside my comfort zone. I don’t usually share stuff about myself online, but I figured it was time to give it a shot. If nothing else, I hope you read this and think: “Hey, this seems like someone I’d like to work with, or at least grab a coffee with.”",
     nationality: "Icelandic",
     location: "Stockholm, Sweden",
     traits: [
@@ -37,7 +37,7 @@ export const AboutMe = () => {
       swedish: "Fluent",
       icelandic: "Fluent",
     },
-    hobbies: ["Coding", "Playing Guitar", "Football", "Gaming", "Hiking"],
+    hobbies: ["Coding", "Playing Guitar", "Football", "Gaming", "Hiking", "Woodworking"],
   };
 
   return (
