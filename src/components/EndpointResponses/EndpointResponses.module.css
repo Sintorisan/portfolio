@@ -1,0 +1,90 @@
+.responseLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #00e0c2;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.responseWrapper {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.responseBody {
+  background-color: var(--json-background);
+  color: var(--json-text);
+  padding: 1.5rem;
+  border-radius: var(--json-border-radius);
+  font-family: "Fira Code", monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow: auto;
+  transition: 0.2s ease-out;
+}
+
+.normalized {
+  background-color: #e2e2e2;
+  color: #111827;
+  font-family: sans-serif;
+  transition: 0.1s ease-out;
+}
+
+.normalizeButton {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--json-key);
+  color: black;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: background-color 0.2s ease;
+}
+
+.normalizeButton:hover {
+  background-color: #60a5fa;
+}
+
+.jsonScheme {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.nestedObject {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.normNestedObject {
+  padding-left: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.jsonKey {
+  color: var(--json-key);
+  font-weight: 500;
+}
+
+.stringValue {
+  color: var(--json-string);
+}
+
+.numberValue {
+  color: var(--json-number);
+}
+
+.boolValue {
+  color: var(--json-bool);
+}
+
+.linkValue {
+  color: var(--json-link);
+  cursor: pointer;
+  text-decoration: underline;
+}

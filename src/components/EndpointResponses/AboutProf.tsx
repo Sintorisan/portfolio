@@ -1,0 +1,133 @@
+import styles from "@/components/EndpointResponses/EndpointResponses.module.css";
+import { Duration } from "date-fns";
+import { useEffect, useState } from "react";
+const { intervalToDuration } = require("date-fns");
+
+export const AboutProf = () => {
+  const [experience, setExperience] = useState<string>();
+  const [isNormalized, setIsNormalized] = useState(false);
+
+  useEffect(() => setExperience(getExperience()), []);
+
+  function getExperience(): string {
+    const currenDate: Date = new Date();
+    const startDate: Date = new Date(2024, 9, 16);
+    const totalExperience: Duration = intervalToDuration({
+      start: startDate,
+      end: currenDate,
+    });
+
+    return `${totalExperience.years != null ? `${totalExperience.years} years, ` : "0 years, "}${
+      totalExperience.months
+    } months and ${totalExperience.days} days`;
+  }
+
+  const data = {
+    title: "Junior .NET Developer",
+    bio: "Former carpenter turned software developer. Passionate about building modern, maintainable systems.",
+    mainTechStack: ["C#", ".NET", "React", "Blazor", "SQL"],
+    skills: [
+      "C#",
+      "ASP.NET Core",
+      "Entity Framework Core",
+      "RESTful API",
+      "Blazor",
+      "HTML",
+      "CSS",
+      "SQL Server",
+      "SQL",
+      "React",
+      "TypeScript",
+      "Azure",
+      "Git / GitHub",
+      "Clean Code",
+    ],
+    currentlyLearning: ["Next.js"],
+    experienceYears: experience,
+    openToWork: true,
+  };
+
+  return (
+    <div className={styles.responseWrapper}>
+      <span className={styles.responseLabel}>Professional Response</span>
+      {!isNormalized ? (
+        <div className={styles.responseBody}>
+          {"{"}
+          <ul className={styles.jsonScheme}>
+            <li>
+              <span className={styles.jsonKey}>"title"</span> :{" "}
+              <span className={styles.stringValue}>"{data.title}"</span>,
+            </li>
+            <li>
+              <span className={styles.jsonKey}>"bio"</span> :{" "}
+              <span className={styles.stringValue}>"{data.bio}"</span>,
+            </li>
+            <li>
+              <span className={styles.jsonKey}>"experience"</span> :{" "}
+              <span className={styles.stringValue}>{data.experienceYears}</span>,
+            </li>
+            <li>
+              <span className={styles.jsonKey}>"mainTechStack"</span> :{" ["}
+              {data.mainTechStack.map((tech, index) => (
+                <span key={index} className={styles.stringValue}>
+                  "{tech}"{data.mainTechStack.length - 1 > index ? ", " : ""}
+                </span>
+              ))}
+              {"],"}
+            </li>
+            <li>
+              <span className={styles.jsonKey}>"skills"</span> :{" ["}
+              {data.skills.map((skill, index) => (
+                <span key={index} className={styles.stringValue}>
+                  "{skill}"{data.skills.length - 1 > index ? ", " : ""}
+                </span>
+              ))}
+              {"],"}
+            </li>
+            <li>
+              <span className={styles.jsonKey}>"currentlyLearning"</span> :{" ["}
+              {data.currentlyLearning.map((current, index) => (
+                <span key={index} className={styles.stringValue}>
+                  "{current}"{data.currentlyLearning.length - 1 > index ? ", " : ""}
+                </span>
+              ))}
+              {"],"}
+            </li>
+            <li>
+              <span className={styles.jsonKey}>"openToWork"</span> :{" "}
+              <span className={styles.boolValue}>{String(data.openToWork)}</span>
+            </li>
+          </ul>
+          {"}"}
+        </div>
+      ) : (
+        <div className={`${styles.responseBody} ${styles.normalized}`}>
+          <p>
+            <strong>Title:</strong> {data.title}
+          </p>
+          <p>
+            <strong>Bio:</strong> {data.bio}
+          </p>
+          <p>
+            <strong>Tech Stack:</strong> {data.mainTechStack.join(", ")}
+          </p>
+          <p>
+            <strong>Skills:</strong> {data.skills.join(", ")}
+          </p>
+          <p>
+            <strong>Currently Learning:</strong> {data.currentlyLearning.join(", ")}
+          </p>
+          <p>
+            <strong>Experience:</strong> {data.experienceYears}
+          </p>
+          <p>
+            <strong>Open For Work:</strong> {data.openToWork ? "Yes" : "No"}
+          </p>
+        </div>
+      )}
+      <button className={styles.normalizeButton} onClick={() => setIsNormalized(!isNormalized)}>
+        {!isNormalized ? "Normalize" : "Return"}
+      </button>
+    </div>
+  );
+};

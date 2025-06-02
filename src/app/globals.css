@@ -8,12 +8,21 @@
 
   --text-main: #e6f1f4;
   --text-muted: #a1b4bc;
-  --heading-color: #9ED3E0;
+  --heading-color: #9ed3e0;
 
   --accent-blue: #00b7ff;
   --accent-green: #16db65;
   --accent-red: #ef476f;
   --accent-yellow: #ffd166;
+
+  --json-key: #93c5fd;
+  --json-string: #34d399;
+  --json-number: #fcd34d;
+  --json-bool: #fb7185;
+  --json-link: #a78bfa;
+  --json-background: #111827;
+  --json-text: #d1d5db;
+  --json-border-radius: 0.75rem;
 }
 
 body {

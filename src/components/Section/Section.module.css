@@ -1,0 +1,12 @@
+.sectionTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.childrenItems {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.3rem;
+}

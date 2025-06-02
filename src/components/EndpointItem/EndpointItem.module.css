@@ -1,0 +1,65 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+}
+
+.accordionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: var(--bg-main);
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.2s ease;
+}
+
+.accordionHeader:hover {
+  background-color: var(--bg-hover);
+}
+
+.methodDisplay {
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  margin-right: 1rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+.get {
+  background-color: #22c55e;
+}
+
+.post {
+  background-color: #3b82f6;
+}
+
+.urlDisplay {
+  font-size: 0.95rem;
+  flex-grow: 1;
+  color: var(--text-subtle);
+  font-weight: bold;
+}
+
+.accordionBody {
+  overflow: hidden;
+  max-height: 1100px;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 1;
+  padding: 1rem;
+}
+
+.hiddenBody {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 1rem;
+}
