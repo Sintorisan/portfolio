@@ -1,28 +1,43 @@
 import styles from "@/components/EndpointResponses/EndpointResponses.module.css";
 import { useState } from "react";
+import { intervalToDuration } from "date-fns";
 
 export const AboutMe = () => {
   const [isNormalized, setIsNormalized] = useState(false);
 
+  function getMyAge(): number {
+    const currentDate: Date = new Date();
+    const birthDate: Date = new Date(1989, 5, 15);
+
+    const age = intervalToDuration({
+      start: birthDate,
+      end: currentDate,
+    });
+
+    return age.years ?? 0;
+  }
+
   const data = {
     name: "Sindri Elfarsson",
-    age: 36,
+    age: getMyAge(),
+    bio: "I’m Sindri, an easygoing, slightly shy extrovert who just really enjoys building things. Whether it’s writing code, sketching weird shapes on a piece of paper, or strumming random chords on a guitar, I find joy in the creative process itself, especially that feeling when the pieces finally click together. I like to compare problems to real-life things, it helps me reason through them. I don’t always know the “right” way to start, but I like figuring things out as I go. I work best when there’s a balance between planning and winging it, and I get a real kick out of seeing steady progress, no matter how small the steps. I’m most comfortable behind the scenes, but I enjoy working in teams too, bouncing ideas around, figuring things out together. I might come off quiet at first, but once I settle in, I open up. People often describe me as kind and a bit playful, which I guess tracks. I don’t take myself too seriously, but I care deeply about the things I build. This portfolio (and the blog) is my way of stepping a little outside my comfort zone. I don’t usually share stuff about myself online, but I figured it was time to give it a shot. If nothing else, I hope you read this and think: “Hey, this seems like someone I’d like to work with, or at least grab a coffee with.”",
     nationality: "Icelandic",
     location: "Stockholm, Sweden",
     traits: [
       "Curious",
-      "Persistent",
       "Collaborative",
       "Creative Problem Solver",
+      "Thinking Outside the Box",
       "Continuous Learner",
       "Adaptable",
+      "Creative",
     ],
     languages: {
       english: "Fluent",
       swedish: "Fluent",
       icelandic: "Fluent",
     },
-    hobbies: ["Coding", "Football", "Gaming"],
+    hobbies: ["Coding", "Playing Guitar", "Football", "Gaming", "Hiking"],
   };
 
   return (
@@ -39,6 +54,10 @@ export const AboutMe = () => {
             <li>
               <span className={styles.jsonKey}>&quot;age&quot;</span> :{" "}
               <span className={styles.numberValue}>{data.age}</span>,
+            </li>
+            <li>
+              <span className={styles.jsonKey}>&quot;bio&quot;</span> :{" "}
+              <span className={styles.numberValue}>{data.bio}</span>,
             </li>
             <li>
               <span className={styles.jsonKey}>&quot;nationality&quot;</span> :{" "}
@@ -89,6 +108,9 @@ export const AboutMe = () => {
           </p>
           <p>
             <strong>Age:</strong> {data.age}
+          </p>
+          <p>
+            <strong>Bio:</strong> {data.bio}
           </p>
           <p>
             <strong>Nationality:</strong> {data.nationality}

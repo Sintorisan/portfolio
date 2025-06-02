@@ -1,5 +1,4 @@
 import styles from "@/components/EndpointResponses/EndpointResponses.module.css";
-import { Duration } from "date-fns";
 import { useEffect, useState } from "react";
 import { intervalToDuration } from "date-fns";
 
@@ -12,7 +11,7 @@ export const AboutProf = () => {
   function getExperience(): string {
     const currenDate: Date = new Date();
     const startDate: Date = new Date(2024, 9, 16);
-    const totalExperience: Duration = intervalToDuration({
+    const totalExperience = intervalToDuration({
       start: startDate,
       end: currenDate,
     });
@@ -24,7 +23,7 @@ export const AboutProf = () => {
 
   const data = {
     title: "Junior .NET Developer",
-    bio: "Former carpenter turned software developer. Passionate about building modern, maintainable systems",
+    bio: "While my core strength lies in C# and backend development, I’m always pushing myself to explore beyond my comfort zone. I’ve been expanding into React and TypeScript lately, building this site as both a portfolio and a way to level up my frontend skills. I don’t chase perfection. I chase improvement. I believe learning happens when you build, make mistakes, and figure it out one step at a time. In teams, I enjoy working together to solve problems, share ideas, and support each other’s growth. I’m not the loudest in the room, but I’m dependable, curious, and always ready to jump in and help. I try to keep things light, bring good energy, and focus on getting the job done well with a bit of personality along the way.",
     mainTechStack: ["C#", ".NET", "React", "Blazor", "SQL"],
     skills: [
       "C#",
