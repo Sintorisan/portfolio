@@ -58,7 +58,7 @@ export const AboutMe = () => {
               ],
             </li>
             <li>
-              <span className={styles.jsonKey}>"languages"</span> : {"{"}
+              <span className={styles.jsonKey}>&quot;languages&quot;</span> : {"{"}
               <ul className={styles.nestedObject}>
                 {Object.entries(data.languages).map(([lang, level], index, array) => (
                   <li key={lang}>

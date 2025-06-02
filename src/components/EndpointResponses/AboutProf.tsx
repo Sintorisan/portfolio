@@ -1,7 +1,7 @@
 import styles from "@/components/EndpointResponses/EndpointResponses.module.css";
 import { Duration } from "date-fns";
 import { useEffect, useState } from "react";
-const { intervalToDuration } = require("date-fns");
+import { intervalToDuration } from "date-fns";
 
 export const AboutProf = () => {
   const [experience, setExperience] = useState<string>();
