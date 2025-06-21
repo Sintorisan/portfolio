@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
-:root {
+/* :root.theme-two {
   --bg-primary: #00212b;
   --bg-secondary: #062e3b;
+  --bg-noralized: #e2e2e2;
   --surface: #0b3c4b;
   --border: #1a4d5c;
 
@@ -20,8 +21,357 @@
   --json-number: #fcd34d;
   --json-bool: #fb7185;
   --json-link: #a78bfa;
+  --json-normalizedlink: #9174cc;
   --json-background: #111827;
   --json-text: #d1d5db;
+  --json-border-radius: 0.75rem;
+} */
+
+:root {
+  --bg-primary: #2e2e2e;
+  --bg-secondary: #3c3c3c;
+  --bg-normalized: #383838;
+  --bg-light: #e0dbd3;
+  --bg-hover: #d6d1c9;
+  --bg-button-hover: #76c1b0;
+  --bg-button: #f6bd60;
+  --surface: #4a4a4a;
+  --border: #5c5c5c;
+
+  --text-main: #eee8d5;
+  --text-muted: #ccc3b2;
+  --heading-color: #f6bd60;
+
+  --accent-blue: #84a59d;
+  --accent-green: #90aa89;
+  --accent-red: #f28482;
+  --accent-yellow: #f6bd60;
+  --accent-teal: #76c1b0;
+
+  --json-background: #2e2e2e;
+  --json-text: #eee8d5;
+  --json-key: #f6bd60;
+  --json-string: #84a59d;
+  --json-number: #f28482;
+  --json-bool: #f5cac3;
+  --json-link: #9a8c98;
+  --json-normalizedlink: #7d6b91;
+  --json-border-radius: 0.75rem;
+}
+
+:root.solarwave {
+  --bg-primary: #1e1f26;
+  --bg-secondary: #2b2d3a;
+  --bg-normalized: #262837;
+  --bg-light: #fef9ef;
+  --bg-hover: #ffe8d6;
+  --bg-button-hover: #ffb703;
+  --bg-button: #fb8500;
+  --surface: #3a3b4c;
+  --border: #4a4b5a;
+
+  --text-main: #fefae0;
+  --text-muted: #d5d0c4;
+  --heading-color: #ffb703;
+
+  --accent-blue: #577590;
+  --accent-green: #81b29a;
+  --accent-red: #e63946;
+  --accent-yellow: #ffb703;
+  --accent-teal: #00b4d8;
+
+  --json-background: #1e1f26;
+  --json-text: #fefae0;
+  --json-key: #ffb703;
+  --json-string: #00b4d8;
+  --json-number: #e63946;
+  --json-bool: #fca311;
+  --json-link: #adb5bd;
+  --json-normalizedlink: #6c757d;
+  --json-border-radius: 0.75rem;
+}
+
+:root.mintchip {
+  --bg-primary: #e3fcec;
+  --bg-secondary: #d2f8e2;
+  --bg-normalized: #c0eac0;
+  --bg-light: #ffffff;
+  --bg-hover: #bbded6;
+  --bg-button-hover: #379683;
+  --bg-button: #5cdb95;
+  --surface: #8ee4af;
+  --border: #379683;
+
+  --text-main: #05386b;
+  --text-muted: #379683;
+  --heading-color: #5cdb95;
+
+  --accent-blue: #5da9e9;
+  --accent-green: #379683;
+  --accent-red: #ff6f61;
+  --accent-yellow: #f5b041;
+  --accent-teal: #5cdb95;
+
+  --json-background: #e3fcec;
+  --json-text: #05386b;
+  --json-key: #379683;
+  --json-string: #5da9e9;
+  --json-number: #ff6f61;
+  --json-bool: #f4a261;
+  --json-link: #6c5ce7;
+  --json-normalizedlink: #3c6382;
+  --json-border-radius: 0.75rem;
+}
+
+:root.neonterminal {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-normalized: #121212;
+  --bg-light: #212121;
+  --bg-hover: #2a2a2a;
+  --bg-button-hover: #0affef;
+  --bg-button: #39ff14;
+  --surface: #222831;
+  --border: #333333;
+
+  --text-main: #e6e6e6;
+  --text-muted: #9a9a9a;
+  --heading-color: #39ff14;
+
+  --accent-blue: #00bfff;
+  --accent-green: #39ff14;
+  --accent-red: #ff073a;
+  --accent-yellow: #fce205;
+  --accent-teal: #0affef;
+
+  --json-background: #0f0f0f;
+  --json-text: #e6e6e6;
+  --json-key: #39ff14;
+  --json-string: #00bfff;
+  --json-number: #ff073a;
+  --json-bool: #fce205;
+  --json-link: #ff61f6;
+  --json-normalizedlink: #c77dff;
+  --json-border-radius: 0.75rem;
+}
+
+:root.cosmicdust {
+  --bg-primary: #1b1f3b;
+  --bg-secondary: #2c2f58;
+  --bg-normalized: #24274b;
+  --bg-light: #fafafa;
+  --bg-hover: #9a8c98;
+  --bg-button-hover: #cba6f7;
+  --bg-button: #f38ba8;
+  --surface: #3e4261;
+  --border: #585c7a;
+
+  --text-main: #e0e0e0;
+  --text-muted: #cfcfcf;
+  --heading-color: #f38ba8;
+
+  --accent-blue: #89b4fa;
+  --accent-green: #a6e3a1;
+  --accent-red: #f38ba8;
+  --accent-yellow: #f9e2af;
+  --accent-teal: #94e2d5;
+
+  --json-background: #1b1f3b;
+  --json-text: #e0e0e0;
+  --json-key: #f38ba8;
+  --json-string: #89b4fa;
+  --json-number: #f9e2af;
+  --json-bool: #a6e3a1;
+  --json-link: #cba6f7;
+  --json-normalizedlink: #b4befe;
+  --json-border-radius: 0.75rem;
+}
+
+:root.winterfox {
+  --bg-primary: #f0f4f8;
+  --bg-secondary: #e4eaf1;
+  --bg-normalized: #dde4ed;
+  --bg-light: #ffffff;
+  --bg-hover: #d0dce7;
+  --bg-button-hover: #82c0cc;
+  --bg-button: #bae8e8;
+  --surface: #cce3f0;
+  --border: #a9c2d1;
+
+  --text-main: #2e3a59;
+  --text-muted: #5f728c;
+  --heading-color: #82c0cc;
+
+  --accent-blue: #5680e9;
+  --accent-green: #84dcc6;
+  --accent-red: #ef476f;
+  --accent-yellow: #ffd166;
+  --accent-teal: #06d6a0;
+
+  --json-background: #f0f4f8;
+  --json-text: #2e3a59;
+  --json-key: #5680e9;
+  --json-string: #84dcc6;
+  --json-number: #ef476f;
+  --json-bool: #ffd166;
+  --json-link: #118ab2;
+  --json-normalizedlink: #073b4c;
+  --json-border-radius: 0.75rem;
+}
+
+:root.sunsetcreek {
+  --bg-primary: #2f2a28;
+  --bg-secondary: #4b3d36;
+  --bg-normalized: #3d332e;
+  --bg-light: #fff4e6;
+  --bg-hover: #f6e1c3;
+  --bg-button-hover: #ffb284;
+  --bg-button: #ff9f1c;
+  --surface: #5e4b43;
+  --border: #7c5e51;
+
+  --text-main: #fdf6ec;
+  --text-muted: #e5d3c3;
+  --heading-color: #ff9f1c;
+
+  --accent-blue: #6886c5;
+  --accent-green: #b8c480;
+  --accent-red: #ff6b6b;
+  --accent-yellow: #ffe66d;
+  --accent-teal: #9ef3f3;
+
+  --json-background: #2f2a28;
+  --json-text: #fdf6ec;
+  --json-key: #ff9f1c;
+  --json-string: #6886c5;
+  --json-number: #ff6b6b;
+  --json-bool: #ffe66d;
+  --json-link: #c4a69f;
+  --json-normalizedlink: #a67f78;
+  --json-border-radius: 0.75rem;
+}
+:root.midnightcircuit {
+  --bg-primary: #0c0f14;
+  --bg-secondary: #161a22;
+  --bg-normalized: #12161d;
+  --bg-light: #1f1f2b;
+  --bg-hover: #252a34;
+  --bg-button-hover: #00bcd4;
+  --bg-button: #2196f3;
+  --surface: #2c2f3a;
+  --border: #3b404c;
+
+  --text-main: #e0f7fa;
+  --text-muted: #b0bec5;
+  --heading-color: #2196f3;
+
+  --accent-blue: #40c4ff;
+  --accent-green: #00e676;
+  --accent-red: #f44336;
+  --accent-yellow: #ffeb3b;
+  --accent-teal: #00bcd4;
+
+  --json-background: #0c0f14;
+  --json-text: #e0f7fa;
+  --json-key: #2196f3;
+  --json-string: #00e676;
+  --json-number: #f44336;
+  --json-bool: #ffeb3b;
+  --json-link: #7c4dff;
+  --json-normalizedlink: #b388ff;
+  --json-border-radius: 0.75rem;
+}
+:root.forestbrew {
+  --bg-primary: #1e2b26;
+  --bg-secondary: #2f4039;
+  --bg-normalized: #263831;
+  --bg-light: #f4f1ee;
+  --bg-hover: #d9cfc3;
+  --bg-button-hover: #b5d6a7;
+  --bg-button: #8bc34a;
+  --surface: #3d5048;
+  --border: #5c7568;
+
+  --text-main: #f4f1ee;
+  --text-muted: #d3d3cb;
+  --heading-color: #8bc34a;
+
+  --accent-blue: #90caf9;
+  --accent-green: #a5d6a7;
+  --accent-red: #ef5350;
+  --accent-yellow: #fdd835;
+  --accent-teal: #80cbc4;
+
+  --json-background: #1e2b26;
+  --json-text: #f4f1ee;
+  --json-key: #aed581;
+  --json-string: #80cbc4;
+  --json-number: #ef5350;
+  --json-bool: #fbc02d;
+  --json-link: #64b5f6;
+  --json-normalizedlink: #81c784;
+  --json-border-radius: 0.75rem;
+}
+:root.magentadream {
+  --bg-primary: #1a001f;
+  --bg-secondary: #290032;
+  --bg-normalized: #210027;
+  --bg-light: #fff0f6;
+  --bg-hover: #ffd6f6;
+  --bg-button-hover: #ff80ab;
+  --bg-button: #ff4081;
+  --surface: #3a004d;
+  --border: #5c006e;
+
+  --text-main: #ffe4f2;
+  --text-muted: #e0aac0;
+  --heading-color: #ff4081;
+
+  --accent-blue: #82b1ff;
+  --accent-green: #b2ff59;
+  --accent-red: #ff1744;
+  --accent-yellow: #ffea00;
+  --accent-teal: #64ffda;
+
+  --json-background: #1a001f;
+  --json-text: #ffe4f2;
+  --json-key: #ff4081;
+  --json-string: #82b1ff;
+  --json-number: #ff1744;
+  --json-bool: #ffea00;
+  --json-link: #e040fb;
+  --json-normalizedlink: #b388ff;
+  --json-border-radius: 0.75rem;
+}
+:root.peachsand {
+  --bg-primary: #f5f1eb;
+  --bg-secondary: #efe5dc;
+  --bg-normalized: #e9dcd1;
+  --bg-light: #ffffff;
+  --bg-hover: #f8ede3;
+  --bg-button-hover: #f4acb7;
+  --bg-button: #fbc4ab;
+  --surface: #e7cfc2;
+  --border: #d9b5aa;
+
+  --text-main: #4a3f35;
+  --text-muted: #8a756a;
+  --heading-color: #f4acb7;
+
+  --accent-blue: #9ec1cf;
+  --accent-green: #b7efc5;
+  --accent-red: #f28482;
+  --accent-yellow: #ffe066;
+  --accent-teal: #aed9e0;
+
+  --json-background: #f5f1eb;
+  --json-text: #4a3f35;
+  --json-key: #f4acb7;
+  --json-string: #aed9e0;
+  --json-number: #f28482;
+  --json-bool: #ffe066;
+  --json-link: #a17c6b;
+  --json-normalizedlink: #7f5a46;
   --json-border-radius: 0.75rem;
 }
 

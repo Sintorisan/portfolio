@@ -1,12 +1,12 @@
 export type Blog = {
+  id: string;
   title: string;
   date: string;
   blogContent: string;
 };
 
-export type BlogPost = {
+export type BlogInfo = {
   id: string;
   title: string;
   date: string;
-  blogContent: string;
 };

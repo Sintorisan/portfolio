@@ -101,7 +101,7 @@ export const CareerExp = () => {
                         ,
                       </li>
                       <li className={styles.jsonScheme}>
-                        <span className={styles.jsonKey}>&quot;technologies&quot;</span> :{"["}
+                        <span className={styles.jsonKey}>&quot;technologies&quot;</span> :{" ["}
                         {project.technologies.map((tech, i) => (
                           <span key={i} className={styles.stringValue}>
                             &quot;{tech}&quot;{i < project.technologies.length - 1 ? ", " : ""}
@@ -167,7 +167,7 @@ export const CareerExp = () => {
         </div>
       )}
       <button className={styles.normalizeButton} onClick={() => setIsNormalized(!isNormalized)}>
-        {!isNormalized ? "Normalize" : "Return"}
+        {!isNormalized ? "Normalize" : "Json"}
       </button>
     </div>
   );

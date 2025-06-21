@@ -35,7 +35,7 @@ export const CareerEdu = ({ onOpenImage }: Props) => {
       start: "2023-11-01",
       end: "2024-02-01",
       graduated: true,
-      diplomaImg: "aisweden- diploma.jpg",
+      diplomaImg: "aisweden-diploma.jpg",
     },
   ];
 
@@ -87,7 +87,7 @@ export const CareerEdu = ({ onOpenImage }: Props) => {
         ) : (
           <div className={`${styles.responseBody} ${styles.normalized}`}>
             {data.map((edu, index) => (
-              <>
+              <div key={index}>
                 <p>
                   <strong>School:</strong> {edu.school}
                 </p>
@@ -108,17 +108,20 @@ export const CareerEdu = ({ onOpenImage }: Props) => {
                 </p>
                 <p>
                   <strong>Diploma:</strong>{" "}
-                  <span className={styles.linkValue} onClick={() => onOpenImage(edu.diplomaImg)}>
+                  <span
+                    className={styles.normalizedLinkValue}
+                    onClick={() => onOpenImage(edu.diplomaImg)}
+                  >
                     {edu.diplomaImg}
                   </span>
                 </p>
                 {data.length - 1 > index ? <hr style={{ margin: "1rem 0" }} /> : ""}
-              </>
+              </div>
             ))}
           </div>
         )}
         <button className={styles.normalizeButton} onClick={() => setIsNormalized(!isNormalized)}>
-          {!isNormalized ? "Normalize" : "Return"}
+          {!isNormalized ? "Normalize" : "Json"}
         </button>
       </div>
     </>

@@ -20,7 +20,7 @@ export const AboutMe = () => {
   const data = {
     name: "Sindri Elfarsson",
     age: getMyAge(),
-    bio: "I’m Sindri, an easygoing, slightly shy extrovert who just really enjoys building things. Whether it’s writing code, sketching weird shapes on a piece of paper, or strumming random chords on a guitar, or even crafting something out of wood, I find joy in the creative process itself, especially that feeling when the pieces finally click together. I like to compare problems to real-life things, it helps me reason through them. I don’t always know the “right” way to start, but I like figuring things out as I go. I work best when there’s a balance between planning and winging it, and I get a real kick out of seeing steady progress, no matter how small the steps. I’m most comfortable behind the scenes, but I enjoy working in teams too, bouncing ideas around, figuring things out together. I might come off quiet at first, but once I settle in, I open up. People often describe me as kind and a bit playful, which I guess tracks. I don’t take myself too seriously, but I care deeply about the things I build. This portfolio (and the blog) is my way of stepping a little outside my comfort zone. I don’t usually share stuff about myself online, but I figured it was time to give it a shot. If nothing else, I hope you read this and think: “Hey, this seems like someone I’d like to work with, or at least grab a coffee with.”",
+    bio: "I’m Sindri, a curious introvert with extrovert tendencies who just really enjoys building things. Whether it’s coding, sketching something weird, strumming random chords on a guitar, or crafting with wood, I find joy in the act of creating. I’m the kind of person who learns by doing, often figuring things out by comparing them to real-life situations, it just helps things click. I’m most comfortable behind the scenes, but I enjoy working in a team too, especially when there’s space to bounce ideas around and figure things out together. This portfolio is part of me stepping outside my comfort zone. I’ve never really liked sharing much online, but I figured it was time to put myself out there a bit. If you’ve made it this far, I hope you leave thinking: ‘Yeah, he seems like a nice guy.’",
     nationality: "Icelandic",
     location: "Stockholm, Sweden",
     traits: [
@@ -57,7 +57,7 @@ export const AboutMe = () => {
             </li>
             <li>
               <span className={styles.jsonKey}>&quot;bio&quot;</span> :{" "}
-              <span className={styles.numberValue}>{data.bio}</span>,
+              <span className={styles.stringValue}>&quot;{data.bio}&quot;</span>,
             </li>
             <li>
               <span className={styles.jsonKey}>&quot;nationality&quot;</span> :{" "}
@@ -137,7 +137,7 @@ export const AboutMe = () => {
         </div>
       )}
       <button className={styles.normalizeButton} onClick={() => setIsNormalized(!isNormalized)}>
-        {!isNormalized ? "Normalize" : "Return"}
+        {!isNormalized ? "Normalize" : "Json"}
       </button>
     </div>
   );

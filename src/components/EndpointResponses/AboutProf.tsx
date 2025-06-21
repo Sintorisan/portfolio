@@ -23,7 +23,7 @@ export const AboutProf = () => {
 
   const data = {
     title: "Junior .NET Developer",
-    bio: "While my core strength lies in C# and backend development, I’m always pushing myself to explore beyond my comfort zone. I’ve been expanding into React and TypeScript lately, building this site as both a portfolio and a way to level up my frontend skills. I don’t chase perfection. I chase improvement. I believe learning happens when you build, make mistakes, and figure it out one step at a time. In teams, I enjoy working together to solve problems, share ideas, and support each other’s growth. I’m not the loudest in the room, but I’m dependable, curious, and always ready to jump in and help. I try to keep things light, bring good energy, and focus on getting the job done well with a bit of personality along the way.",
+    bio: "I’m a developer who enjoys figuring things out by building. My background is mainly in .NET and C#, but I like exploring other tools when a project calls for it, this site, for example, is built with React and TypeScript. I don’t like to overcomplicate things, I try to keep my code clean, maintainable, and focused on getting the job done. I like the puzzle-solving side of development, whether it’s setting up the backend workflow or wrestling with CSS until things look right. I work best when there’s a clear goal and some room to experiment along the way.",
     mainTechStack: ["C#", ".NET", "React", "Blazor", "SQL"],
     skills: [
       "C#",
@@ -125,7 +125,7 @@ export const AboutProf = () => {
         </div>
       )}
       <button className={styles.normalizeButton} onClick={() => setIsNormalized(!isNormalized)}>
-        {!isNormalized ? "Normalize" : "Return"}
+        {!isNormalized ? "Normalize" : "Json"}
       </button>
     </div>
   );
