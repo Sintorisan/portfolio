@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 import fs from "fs";
 import path from "path";
 
 export async function POST(req: NextRequest) {
   const { name, email, message, includeResume } = await req.json();
-  const nodemailer = require("nodemailer");
 
   const transporter = nodemailer.createTransport({
     host: "smtp.zoho.eu",
