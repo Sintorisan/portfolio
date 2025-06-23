@@ -1,6 +1,6 @@
-import styles from "@/components/EndpointResponses/EndpointResponses.module.css";
+import styles from "./EndpointResponses.module.css";
 
-import { getBlogInfos } from "@/services/apiService";
+import { getBlogInfos } from "@/app/api/blog/route";
 import { BlogInfo } from "@/types";
 import { useEffect, useState } from "react";
 

@@ -21,6 +21,7 @@ export default function Home() {
   const [currentTheme, setCurrentTheme] = useState("default");
 
   const themeNames = [
+    "default",
     "solarwave",
     "mintchip",
     "neonterminal",
@@ -62,10 +63,13 @@ export default function Home() {
   return (
     <main className={styles.mainWrapper}>
       <button onClick={handleRandomTheme} className={styles.themeToggleButton}>
-        {themeEmojis[currentTheme] || "🎲"} Switch Theme
+        🎲 Theme Roulette
         <br />
         <span className={styles.themeName}>
-          Theme: <code>{currentTheme}</code>
+          Theme:{" "}
+          <code>
+            {currentTheme} {themeEmojis[currentTheme]}
+          </code>
         </span>
       </button>{" "}
       <div className={styles.contentWrapper}>
@@ -74,9 +78,8 @@ export default function Home() {
           <p className={styles.introText}>
             Hey! I’m Sindri, a .NET developer who enjoys building things, solving problems, and
             learning along the way. This site is my portfolio, my little corner of the internet
-            where I showcase what I’ve built, share thoughts through my blog, and experiment with
-            different tech. Take a look around, and if you’re curious, scroll down and check out the
-            blog!
+            where I showcase what I’ve built and share thoughts through my blog. Take a look around,
+            and if you’re curious, scroll down and check out the blog!
           </p>
         </header>
 
@@ -116,7 +119,7 @@ export default function Home() {
           </EndpointItem>
         </Section>
 
-        <Section header="Contact (Work in progress. For contact, email me at: sindrielfarsson.dev@gmail.com)">
+        <Section header="Contact">
           <EndpointItem method="Post" url="/contact/me">
             <ContactMe />
           </EndpointItem>

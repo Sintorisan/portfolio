@@ -59,6 +59,38 @@
   --json-border-radius: 0.75rem;
 }
 
+:root.default {
+  --bg-primary: #2e2e2e;
+  --bg-secondary: #3c3c3c;
+  --bg-normalized: #383838;
+  --bg-light: #e0dbd3;
+  --bg-hover: #d6d1c9;
+  --bg-button-hover: #76c1b0;
+  --bg-button: #f6bd60;
+  --surface: #4a4a4a;
+  --border: #5c5c5c;
+
+  --text-main: #eee8d5;
+  --text-muted: #ccc3b2;
+  --heading-color: #f6bd60;
+
+  --accent-blue: #84a59d;
+  --accent-green: #90aa89;
+  --accent-red: #f28482;
+  --accent-yellow: #f6bd60;
+  --accent-teal: #76c1b0;
+
+  --json-background: #2e2e2e;
+  --json-text: #eee8d5;
+  --json-key: #f6bd60;
+  --json-string: #84a59d;
+  --json-number: #f28482;
+  --json-bool: #f5cac3;
+  --json-link: #9a8c98;
+  --json-normalizedlink: #7d6b91;
+  --json-border-radius: 0.75rem;
+}
+
 :root.solarwave {
   --bg-primary: #1e1f26;
   --bg-secondary: #2b2d3a;

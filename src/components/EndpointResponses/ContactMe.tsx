@@ -48,24 +48,41 @@ export const ContactMe = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log("Form submitted", form);
-    setForm({ name: "", email: "", message: "", includeResume: true });
-  };
+
+    const formEl = e.currentTarget;
+    if (!formEl.checkValidity()) {
+      formEl.reportValidity();
+      return;
+    }
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
+    if (res.ok) alert("Message sent!");
+    else alert("Something went wrong 😥");
+  }
 
   return (
     <div className={styles.responseWrapper}>
       <div className={styles.labelRow}>
         <span className={styles.responseLabel}>Contact Request</span>
-        <button className={`${styles.buttonBase} ${styles.buttonTop}`} type="submit">
+        <button
+          className={`${styles.buttonBase} ${styles.buttonTop}`}
+          form="contactForm"
+          type="submit"
+        >
           Send Request
         </button>{" "}
       </div>
       {!isNormalized ? (
         <div className={styles.responseBody}>
           {"{"}
-          <form className={styles.jsonInputGroup} onSubmit={handleSubmit} id="contactForm">
+          <form className={styles.jsonInputGroup} id="contactForm" onSubmit={handleSubmit}>
             <ul className={styles.jsonScheme}>
               <li>
                 <span className={styles.jsonKey}>&quot;name&quot;</span> :{" "}
