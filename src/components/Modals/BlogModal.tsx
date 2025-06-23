@@ -1,7 +1,7 @@
 import styles from "@/components/Modals/Modal.module.css";
 import { Blog } from "@/types";
 import { useEffect, useState } from "react";
-import { getBlogById } from "@/app/api/blog/route";
+import { getBlogById } from "@/app/api/blog/blogRouteMock";
 
 interface Props {
   isOpen: boolean;
