@@ -16,14 +16,13 @@ export const AboutProf = () => {
       end: currenDate,
     });
 
-    return `${totalExperience.years != null ? `${totalExperience.years} years, ` : "0 years, "}${
-      totalExperience.months
-    } months and ${totalExperience.days} days`;
+    return `${totalExperience.years != null ? `${totalExperience.years} years, ` : "0 years, "}${totalExperience.months
+      } months and ${totalExperience.days} days`;
   }
 
   const data = {
     title: "Junior .NET Developer",
-    bio: "I’m a developer who enjoys figuring things out by building. My background is mainly in .NET and C#, but I like exploring other tools when a project calls for it, this site, for example, is built with React and TypeScript. I don’t like to overcomplicate things, I try to keep my code clean, maintainable, and focused on getting the job done. I like the puzzle-solving side of development, whether it’s setting up the backend workflow or wrestling with CSS until things look right. I work best when there’s a clear goal and some room to experiment along the way.",
+    bio: "I'm a developer who likes to learn by building things. My main background is in .NET, but I try to explore other tools when it makes sense. This site, for example, is built with React and TypeScript, mostly to push myself to learn something new. I try to keep my code simple, readable, and focused on getting the job done. I enjoy the problem-solving side of development, whether it’s setting up the backend workflow or wrestling with CSS until things look right (okay, slight exaggeration). I work best when there's a clear goal and some space to experiment on the way there. While I'm comfortable working on my own, I really enjoy being part of a team too, especially when there's room to bounce around ideas and figure things out together.",
     mainTechStack: ["C#", ".NET", "React", "Blazor", "SQL"],
     skills: [
       "C#",
