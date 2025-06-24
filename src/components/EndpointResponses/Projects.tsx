@@ -80,8 +80,7 @@ export const Projects = ({ onOpenImage }: Props) => {
     <div className={styles.responseWrapper}>
       <div className={styles.labelRow}>
         <span className={styles.responseLabel}>Projects Response</span>
-        <select className={styles.buttonBase} onChange={handleSortChange}>
-          <option>Filter by Status</option>
+        <select className={styles.buttonBase} onChange={handleSortChange} defaultValue="">
           <option value="">All Projects</option>
           <option value={status.WorkInProgress}>Work In Progress</option>
           <option value={status.Complete}>Complete</option>
