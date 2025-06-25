@@ -3,6 +3,7 @@ import styles from "./EndpointResponses.module.css";
 
 export const ContactMe = () => {
   const [isNormalized, setIsNormalized] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -28,15 +29,12 @@ export const ContactMe = () => {
       const el = inputRefMessage.current;
       const shadow = shadowRef.current;
 
-      // Update shadow content with the message (and a space to prevent collapse)
       shadow.textContent = form.message || " ";
 
-      // Set the textarea width based on shadow width
       const shadowWidth = shadow.offsetWidth;
       const newWidth = Math.min(shadowWidth + 2, 400); // +2 for caret padding
       el.style.width = `${newWidth}px`;
 
-      // Also auto-expand height
       requestAnimationFrame(() => {
         el.style.height = "auto";
         el.style.height = el.scrollHeight + "px";
@@ -57,14 +55,23 @@ export const ContactMe = () => {
       return;
     }
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
+    setIsLoading(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-    if (res.ok) alert("Message sent!");
-    else alert("Something went wrong 😥");
+      if (res.ok) {
+        alert("Message sent!");
+        setForm({ name: "", email: "", message: "", includeResume: false });
+      } else {
+        alert("Something went wrong 😥");
+      }
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (
@@ -75,9 +82,10 @@ export const ContactMe = () => {
           className={`${styles.buttonBase} ${styles.buttonTop}`}
           form="contactForm"
           type="submit"
+          disabled={isLoading}
         >
-          Send Request
-        </button>{" "}
+          {isLoading ? <span className={styles.spinner}></span> : "Send Request"}
+        </button>
       </div>
       {!isNormalized ? (
         <div className={styles.responseBody}>
