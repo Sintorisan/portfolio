@@ -1,6 +1,8 @@
 "use client";
 
 import styles from "./page.module.css";
+
+import { Analytics } from "@vercel/analytics/next";
 import { useState } from "react";
 import { Section } from "@/components/Section/Section";
 import { EndpointItem } from "@/components/EndpointItem/EndpointItem";
@@ -133,6 +135,7 @@ export default function Home() {
       {selectedBlog && (
         <BlogModal id={selectedBlog} isOpen={true} onClose={() => setSelectedBlog(null)} />
       )}
+      <Analytics />
     </main>
   );
 }
