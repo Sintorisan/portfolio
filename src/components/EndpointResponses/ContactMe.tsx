@@ -7,7 +7,7 @@ export const ContactMe = () => {
     name: "",
     email: "",
     message: "",
-    includeResume: true,
+    includeResume: false,
   });
 
   const inputRefName = useRef<HTMLInputElement>(null);

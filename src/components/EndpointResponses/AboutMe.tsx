@@ -20,7 +20,7 @@ export const AboutMe = () => {
   const data = {
     name: "Sindri Elfarsson",
     age: getMyAge(),
-    bio: "I’m Sindri, a curious introvert with extrovert tendencies who just really enjoys building things. Whether it’s coding, sketching something weird, strumming random chords on a guitar, or crafting with wood, I find joy in the act of creating. I’m the kind of person who learns by doing, often figuring things out by comparing them to real-life situations, it just helps things click. I’m most comfortable behind the scenes, but I enjoy working in a team too, especially when there’s space to bounce ideas around and figure things out together. This portfolio is part of me stepping outside my comfort zone. I’ve never really liked sharing much online, but I figured it was time to put myself out there a bit. If you’ve made it this far, I hope you leave thinking: ‘Yeah, he seems like a nice guy.’",
+    bio: "I’m Sindri, a curious introvert with some extrovert tendencies who just enjoys building things. Whether it’s sketching something odd, strumming random guitar chords, crafting with wood, or writing code, I’ve always been drawn to the creative process. I learn best by doing and usually make sense of things by comparing them to everyday situations, it just clicks better that way. I’ve never been big on sharing stuff online, but I figured it was time to show more of what I do. If you’ve made it this far, I hope your takeaway is something like: “Yeah, he seems like a solid guy.”",
     nationality: "Icelandic",
     location: "Stockholm, Sweden",
     traits: [
