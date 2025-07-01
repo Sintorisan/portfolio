@@ -18,7 +18,8 @@ import { Socials } from "@/components/EndpointResponses/Socials";
 import { ContactMe } from "@/components/EndpointResponses/ContactMe";
 
 export default function Home() {
-  const [selectedImageUrl, setSelectedImageUrl] = useState<string | null>(null);
+  const [selectedImages, setSelectedImages] = useState<string[] | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number>(0);
   const [selectedBlog, setSelectedBlog] = useState<string | null>(null);
   const [currentTheme, setCurrentTheme] = useState("default");
 
@@ -96,7 +97,12 @@ export default function Home() {
 
         <Section header="Career">
           <EndpointItem method="GET" url="/career/education">
-            <CareerEdu onOpenImage={(imgUrl) => setSelectedImageUrl(imgUrl)} />
+            <CareerEdu
+              onOpenImage={(images, index) => {
+                setSelectedImages(images);
+                setSelectedImageIndex(index);
+              }}
+            />
           </EndpointItem>
           <EndpointItem method="GET" url="/career/experience">
             <CareerExp />
@@ -105,7 +111,12 @@ export default function Home() {
 
         <Section header="Projects">
           <EndpointItem method="GET" url="/projects">
-            <Projects onOpenImage={(imgUrl) => setSelectedImageUrl(imgUrl)} />
+            <Projects
+              onOpenImage={(images, index) => {
+                setSelectedImages(images);
+                setSelectedImageIndex(index);
+              }}
+            />
           </EndpointItem>
         </Section>
 
@@ -127,10 +138,19 @@ export default function Home() {
           </EndpointItem>
         </Section>
       </div>
-      {selectedImageUrl && (
-        <ImgModal title={selectedImageUrl} isOpen={true} onClose={() => setSelectedImageUrl(null)}>
-          <img src={`img/${selectedImageUrl}`} alt="image" />
-        </ImgModal>
+      {selectedImages && (
+        <ImgModal
+          images={selectedImages}
+          index={selectedImageIndex}
+          isOpen={true}
+          onClose={() => setSelectedImages(null)}
+          onNext={() => setSelectedImageIndex((prev) => (prev + 1) % selectedImages.length)}
+          onPrev={() =>
+            setSelectedImageIndex(
+              (prev) => (prev - 1 + selectedImages.length) % selectedImages.length
+            )
+          }
+        />
       )}
       {selectedBlog && (
         <BlogModal id={selectedBlog} isOpen={true} onClose={() => setSelectedBlog(null)} />

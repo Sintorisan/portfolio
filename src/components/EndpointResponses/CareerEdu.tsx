@@ -8,11 +8,11 @@ interface Education {
   start: string;
   end: string;
   graduated: boolean;
-  diplomaImg: string;
+  diplomaImg: string[];
 }
 
 interface Props {
-  onOpenImage: (url: string) => void;
+  onOpenImage: (url: string[], index: number) => void;
 }
 
 export const CareerEdu = ({ onOpenImage }: Props) => {
@@ -26,7 +26,7 @@ export const CareerEdu = ({ onOpenImage }: Props) => {
       start: "2023-08-21",
       end: "2025-05-23",
       graduated: true,
-      diplomaImg: "it-hogskolan-diploma.jpg",
+      diplomaImg: ["it-hogskolan-diploma1.jpg", "it-hogskolan-diploma2.jpg"],
     },
     {
       school: "AI Sweden",
@@ -35,7 +35,7 @@ export const CareerEdu = ({ onOpenImage }: Props) => {
       start: "2023-11-01",
       end: "2024-02-01",
       graduated: true,
-      diplomaImg: "aisweden-diploma.jpg",
+      diplomaImg: ["aisweden-diploma.jpg"],
     },
   ];
 
@@ -75,8 +75,18 @@ export const CareerEdu = ({ onOpenImage }: Props) => {
                 </li>
                 <li className={styles.jsonScheme}>
                   <span className={styles.jsonKey}>&quot;diplomaImg&quot;</span> :{" "}
-                  <span className={styles.linkValue} onClick={() => onOpenImage(edu.diplomaImg)}>
-                    &quot;{edu.diplomaImg}&quot;
+                  <span>
+                    [
+                    {edu.diplomaImg.map((img, imgIndex) => (
+                      <span
+                        key={imgIndex}
+                        className={styles.linkValue}
+                        onClick={() => onOpenImage(edu.diplomaImg, imgIndex)}
+                      >
+                        &quot;{img}&quot;{imgIndex < edu.diplomaImg.length - 1 ? ", " : ""}
+                      </span>
+                    ))}
+                    ]
                   </span>
                 </li>
                 {data.length - 1 > index ? "}, " : "}"}
@@ -107,13 +117,16 @@ export const CareerEdu = ({ onOpenImage }: Props) => {
                   <strong>Graduated:</strong> {edu.graduated ? "Yes" : "No"}
                 </p>
                 <p>
-                  <strong>Diploma:</strong>{" "}
-                  <span
-                    className={styles.normalizedLinkValue}
-                    onClick={() => onOpenImage(edu.diplomaImg)}
-                  >
-                    {edu.diplomaImg}
-                  </span>
+                  <strong>Diplomas:</strong>{" "}
+                  {edu.diplomaImg.map((img, imgIndex) => (
+                    <span
+                      key={imgIndex}
+                      className={styles.normalizedLinkValue}
+                      onClick={() => onOpenImage(edu.diplomaImg, imgIndex)}
+                    >
+                      {img}
+                    </span>
+                  ))}
                 </p>
                 {data.length - 1 > index ? <hr style={{ margin: "1rem 0" }} /> : ""}
               </div>

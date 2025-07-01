@@ -16,7 +16,7 @@ interface Project {
 }
 
 interface Props {
-  onOpenImage: (url: string) => void;
+  onOpenImage: (url: string[], index: number) => void;
 }
 
 export const Projects = ({ onOpenImage }: Props) => {
@@ -131,7 +131,11 @@ export const Projects = ({ onOpenImage }: Props) => {
               <li className={styles.jsonScheme}>
                 <span className={styles.jsonKey}>&quot;projectImg&quot;</span> :{" ["}
                 {proj.projectImg.map((img, index) => (
-                  <span key={index} className={styles.linkValue} onClick={() => onOpenImage(img)}>
+                  <span
+                    key={index}
+                    className={styles.linkValue}
+                    onClick={() => onOpenImage(proj.projectImg, index)}
+                  >
                     &quot;{img}&quot;{index < proj.projectImg.length - 1 ? ", " : ""}
                   </span>
                 ))}
@@ -173,7 +177,10 @@ export const Projects = ({ onOpenImage }: Props) => {
                 <strong>Images:</strong>{" "}
                 {proj.projectImg.map((img, index) => (
                   <span key={index}>
-                    <span className={styles.normalizedLinkValue} onClick={() => onOpenImage(img)}>
+                    <span
+                      className={styles.normalizedLinkValue}
+                      onClick={() => onOpenImage(proj.projectImg, index)}
+                    >
                       {img}
                     </span>
                     {index < proj.projectImg.length - 1 ? " - " : ""}
